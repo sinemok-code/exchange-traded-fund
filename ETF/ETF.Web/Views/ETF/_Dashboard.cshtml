@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "ETF Performance";
+}
+
+<h2>ETF Performance</h2>
+
+<div class="container">
+    <label for="startDate" class="sr-only">Start Date</label>
+    <input type="text" id="startDate" placeholder="Start Date" />
+    <br />
+
+    <label for="startDate" class="sr-only">End Date</label>
+    <input type="text" id="endDate" placeholder="End Date" />
+    <br />
+
+    <button class="btn btn-default" id="updateDates" type="submit">Update</button>
+</div>
+
+<div id="etfWeightedIndicesContainer"></div>
+
+<h3>Stock Weighted Indices Data</h3>
+<div id="stockWeightedIndicesContainer"></div>
+
+<div id="topStocksContainer"></div>
+
+<div id="stockReturnContainer"></div>
+
+<link href="http://cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+<script src="~/Scripts/highcharts.src.js"></script>
+<script src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+
+<script src="~/Scripts/app/dashboard/etfWeightedIndices.js"></script>

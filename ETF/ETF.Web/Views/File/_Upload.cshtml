@@ -1,0 +1,34 @@
+﻿@model ETF.Web.ViewModel.UploadFileViewModel
+
+
+@{
+    ViewBag.Title = "Upload ETF File";
+}
+
+<h2>Upload ETF File</h2>
+
+@if (Model.DisplayMessage)
+{
+    if (Model.Success)
+    {
+        <div class="alert alert-success">Success! File uploaded. Please visit ETF Dashboard</div>
+    }
+    else
+    {
+        <div class="alert alert-danger">Error ! File upload operation encountered a problem. Please try again</div>
+    }
+}
+
+@using (Html.BeginForm("Upload", "File", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <span class="btn btn-default btn-file">
+        Browse <input type="file" name="file" id="file">
+    </span>
+
+    <button class="btn btn-default" id="uploadFile" type="submit">Upload</button>
+}
+
+<input type="text" ng-model="helloAngular" />
+<h1>{{helloAngular}}</h1>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
